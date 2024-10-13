@@ -41,3 +41,16 @@
    ```
 
 8. Visit `http://127.0.0.1:8000` to access the application.
+
+
+
+9. ![Alt text](project-pic/Laravel.png)
+
+
+10. ![Alt text](project-pic/Register.png)
+
+11. ![Alt text](project-pic/Login.png)
+
+12. ![Alt text](project-pic/Userlist.png)
+
+13. ![Alt text](project-pic/Trasheduser.png)
