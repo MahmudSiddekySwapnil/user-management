@@ -86,15 +86,18 @@
                                         <tr>
                                             <td><b>Image</b></td>
                                             <td>
-                                                <img class="user-image img-fluid" alt="User Image" style="max-width: 100px;" />
-                                                <input type="file" class="form-control image-input mt-2" accept="image/*">
+                                                <img class="user-image img-fluid" alt="User Image"
+                                                     style="max-width: 100px;"/>
+                                                <input type="file" class="form-control image-input mt-2"
+                                                       accept="image/*">
                                             </td>
                                         </tr>
                                         <input type="hidden" class="form-control id">
                                         </tbody>
                                     </table>
                                 </div>
-                                <button class="btn btn-primary" id="edit-btn" onclick="saveUserDetails()">Update</button>
+                                <button class="btn btn-primary" id="edit-btn" onclick="saveUserDetails()">Update
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -263,6 +266,7 @@
                 }
             });
         }
+
         function permanent_delete_user(id) {
             Swal.fire({
                 title: 'Are you sure?',

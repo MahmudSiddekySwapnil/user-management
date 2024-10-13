@@ -87,15 +87,18 @@
                                         <tr>
                                             <td><b>Image</b></td>
                                             <td>
-                                                <img class="user-image img-fluid" alt="User Image" style="max-width: 100px;" />
-                                                <input type="file" class="form-control image-input mt-2" accept="image/*">
+                                                <img class="user-image img-fluid" alt="User Image"
+                                                     style="max-width: 100px;"/>
+                                                <input type="file" class="form-control image-input mt-2"
+                                                       accept="image/*">
                                             </td>
                                         </tr>
                                         <input type="hidden" class="form-control id">
                                         </tbody>
                                     </table>
                                 </div>
-                                <button class="btn btn-primary" id="edit-btn" onclick="saveUserDetails()">Update</button>
+                                <button class="btn btn-primary" id="edit-btn" onclick="saveUserDetails()">Update
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -224,7 +227,7 @@
             }
         });
 
-            function delete_user(id) {
+        function delete_user(id) {
             // Use SweetAlert for confirmation
             Swal.fire({
                 title: 'Are you sure?',
@@ -275,7 +278,7 @@
             $.ajax({
                 type: "post",
                 url: "<?= URL::to('/user_details'); ?>/",
-                data: { "id": id },
+                data: {"id": id},
                 success: function (data) {
                     console.log(data);
                     $('.name').val(data.name);
@@ -293,6 +296,7 @@
                 }
             });
         }
+
         function saveUserDetails() {
             // Use FormData to handle file upload
             let formData = new FormData();
@@ -321,6 +325,9 @@
                         timer: 2000 // Show for 2 seconds
                     });
                     $('#details').modal('hide');
+                    setTimeout(function () {
+                        location.reload();
+                    }, 2000);
                 },
                 error: function (xhr, status, error) {
                     const errorMessage = xhr.responseJSON?.error || 'An error occurred';
@@ -333,9 +340,11 @@
                 }
             });
         }
+
         function addNewUser() {
             $('#createUserModal').modal('show');
         }
+
         $(document).ready(function () {
             $('#submitUserButton').click(function (e) {
                 e.preventDefault();
